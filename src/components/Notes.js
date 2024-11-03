@@ -63,7 +63,7 @@ export default function Notes() {
                 fontSize: 40,
               }}
             >
-              Notewise
+              Electron
             </h1>
             <div className="typewriting-effect" style={{ margin: "10px" }}>
               <TypeAnimation
