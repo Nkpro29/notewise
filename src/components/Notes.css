@@ -1,0 +1,15 @@
+.button{
+    margin: 10px;
+    width: 80px;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 7px;
+    
+}
+.button:hover{
+    background-color: lightgreen;
+}
+
+.list:hover{
+    background-color: antiquewhite;
+}
