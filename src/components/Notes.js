@@ -89,6 +89,7 @@ export default function Notes() {
             }}
           >
             <textarea
+              className="notesArea"
               value={noteText}
               onChange={(e) => setNoteText(e.target.value)}
               placeholder="Write your note here..."
@@ -101,6 +102,7 @@ export default function Notes() {
                 margin: "10px",
                 padding: "10px",
                 backgroundColor: "seashell",
+                fontSize: "20px",
               }}
             />
             <button onClick={saveNote} className="button">
@@ -108,10 +110,7 @@ export default function Notes() {
             </button>
           </div>
         </div>
-        <div
-          className="notesPreview"
-          style={{ overflowY: "auto" }}
-        >
+        <div className="notesPreview" style={{ overflowY: "auto" }}>
           <h2>Saved Notes</h2>
           <ul>
             {notes.map((note, index) => (
@@ -128,9 +127,11 @@ export default function Notes() {
                   cursor: "pointer",
                   maxWidth: "300px",
                   maxHeight: "auto",
+                  transition: "box-shadow 0.3s ease",
                 }}
               >
-                {note.slice(0,40)}{note.length > 40 && "...."}
+                {note.slice(0, 40)}
+                {note.length > 40 && "...."}
               </li>
             ))}
           </ul>
